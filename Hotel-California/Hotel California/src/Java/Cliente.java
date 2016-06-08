@@ -11,8 +11,6 @@
 public class Cliente {
     private String nombre;
     private String rut;
-    
-    pico zorra y weas
 
     public String getNombre() {
         return nombre;
