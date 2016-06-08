@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+body{background-image:url(backg.jpg);
+     font-family: 'Righteous', cursive;
+     margin: 1rem;
+     padding: 1rem;
+     border: 2px solid #ccc;
+     /* IMPORTANTE */
+     text-align: center;
+     alignment-adjust:middle;
+}
+
+h1{
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+
+h2{
+    color:white;
+    font-family: 'Righteous', cursive;
+}
+
+table{
+    font-family: 'Righteous', cursive;  
+    alignment-adjust:central;
+    alignment-baseline:central;
+   margin: 0 auto;
+text-align: left;
+}
+
+a{
+    color:white;
+    font-family: 'Righteous', cursive;
+    font-size:x-large;
+}
