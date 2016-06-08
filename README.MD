@@ -18,5 +18,6 @@ Pantallas:
 4) Ver lista de clientes
 5) Reserva de Habitacion
 6) Cerrar atencion
-7) Cotización
-8) Información JSP
+7) CotizaciÃ³n
+8) InformaciÃ³n JSP
+.......................................................
