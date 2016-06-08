@@ -1,7 +1,7 @@
 <%-- 
     Document   : RegistrarHuesped
     Created on : 07-jun-2016, 22:59:25
-    Author     : bpadi_000
+    Author     : bpadi_000 ..
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
