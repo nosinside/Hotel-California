@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Style.css"/>        
-        <title>MIRÁ MIRÁ.... HOLA VITEH - Buena vieja</title>
+        <title>Welcome to the hotel California | Tinini, tinini, ni ni ni!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script language="JavaScript">
@@ -23,8 +23,30 @@ and open the template in the editor.
         </script> 
     </head>
     <body onload="mueveReloj()">
-        <div>MIRÁ MIRÁ.... HOLA VITEH - sooo</div>
+        <div id="contenedor">
+            <div id="cabecera">
+                <img src="Imagenes/logo.png">
+                <div id="barra-navegacion">
+                    <a href="VerListaClientes.jsp">Ver Clientes</a> |
+                    <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
+                    <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
+                    <a href="ModificarCliente.jsp">Modificar Cliente</a> |
+                    <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
+                    <a href="Cotizacion.jsp">Generar Cotización</a> | 
+                    <a href="InformacionJSP.jsp">Información</a>
+                <div id="cuerpo">
+                    La hora es:
         <form name="form_reloj"> 
-        <input type="text" name="reloj" size="10"> </form> 
+        <input type="text" name="reloj" size="10"> </form>
+                    <div id="lateral">
+                         <a href="javascript:history.back(1)">Volver Atrás</a>
+                        <div id="navAbajo">
+                            Informacion General Sobre web
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
     </body>
 </html>

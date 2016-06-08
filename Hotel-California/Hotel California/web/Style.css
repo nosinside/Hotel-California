@@ -2,9 +2,6 @@
 
 body{background-image:url(backg.jpg);
      font-family: 'Righteous', cursive;
-     margin: 1rem;
-     padding: 1rem;
-     border: 2px solid #ccc;
      /* IMPORTANTE */
      text-align: center;
      alignment-adjust:middle;
@@ -22,14 +19,50 @@ h2{
 
 table{
     font-family: 'Righteous', cursive;  
-    alignment-adjust:central;
-    alignment-baseline:central;
-   margin: 0 auto;
-text-align: left;
+
+    margin: 0 auto;
+    text-align: left;
 }
 
 a{
     color:white;
     font-family: 'Righteous', cursive;
-    font-size:x-large;
+    font-size: 15px;
+}
+
+#lateral{
+  width: 200px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  float: right;
+}
+
+#navAbajo{
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding: 1px 0px 10px 0px;
+}
+
+#barra-navegacion{
+  padding: 3px 10px 5px 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#cuerpo{
+  width: 900px;
+  margin-left: 1px;
+  padding: 12px 0px 10px 0px;
+  float: left;
+}
+
+#contenedor{
+  text-align: left;
+  width: 900px;
+  margin: auto;
+}
+
+#cabecera{
+  height: 100px;
+  width: 900px;
 }
