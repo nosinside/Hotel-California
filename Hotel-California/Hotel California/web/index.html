@@ -1,52 +1,40 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="Style.css"/>        
-        <title>Welcome to the hotel California | Tinini, tinini, ni ni ni!</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script language="JavaScript">
-            function mueveReloj() {
-                momentoActual = new Date()
-                hora = momentoActual.getHours()
-                minuto = momentoActual.getMinutes()
-                segundo = momentoActual.getSeconds()
-                horaImprimible = hora + " : " + minuto + " : " + segundo
-                document.form_reloj.reloj.value = horaImprimible
-                setTimeout("mueveReloj()", 1000)
-            }
-        </script> 
+        <link rel="stylesheet" type="text/css" href="Style.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Welcome to the hotel California | Inicio</title>
     </head>
-    <body onload="mueveReloj()">
+    <body>
         <div id="contenedor">
             <div id="cabecera">
-                <img src="Imagenes/logo.png">
-                <div id="barra-navegacion">
-                    <a href="VerListaClientes.jsp">Ver Clientes</a> |
-                    <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
-                    <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
-                    <a href="ModificarCliente.jsp">Modificar Cliente</a> |
-                    <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
-                    <a href="Cotizacion.jsp">Generar Cotización</a> | 
-                    <a href="InformacionJSP.jsp">Información</a>
-                <div id="cuerpo">
-                    La hora es:
-        <form name="form_reloj"> 
-        <input type="text" name="reloj" size="10"> </form>
-                    <div id="lateral">
-                         <a href="javascript:history.back(1)">Volver Atrás</a>
-                        <div id="navAbajo">
-                            Informacion General Sobre web
-                        </div>
-                    </div>
-                </div>
-              </div>
+                <a href="index.html"><img src="Imagenes/logo.png"></a>
             </div>
+            <div id="barra-navegacion">
+                <a href="VerListaClientes.jsp">Ver Clientes</a> |
+                <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
+                <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
+                <a href="ModificarCliente.jsp">Modificar Cliente</a> |
+                <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
+                <a href="Cotizacion.jsp">Generar Cotización</a> |
+                <a href="InformacionJSP.jsp">Información</a>
+            </div>
+            <div id="cuerpo">
+
+                <h1>Bienvenido</h1>
+                <h4>A el Hotel California</h4>
+                <p>Sistema Integrado de reserva de habitaciones, desarrollado por:</p>
+                <ul><li>Ademir Monardes</li>
+                    <li>Bastian Padilla</li>
+                    <li>Darwin Vera</li>
+                    <li>Johan Barahona</li>
+                </ul>
+                <p>Para el docente: Cristian Leiva</p>
+            </div>
+            <div id="navAbajo">
+                <a href="javascript:history.back(1)">Volver Atrás</a>
+            </div>
+            
         </div>
     </body>
 </html>
+

@@ -1,25 +1,50 @@
-<%-- 
-    Document   : RegistrarHuesped
-    Created on : 07-jun-2016, 22:59:25
-    Author     : bpadi_000 ..
+    <%-- 
+    Document   : Cotizacion
+    Created on : 07-jun-2016, 23:30:35
+    Author     : Johan Barahona
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="Style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrar Huesped</title>
+        <title>Welcome to the hotel California | Cotización</title>
     </head>
     <body>
-        <h1></h1>
-         <form method="post">
-            <p>Número de Habitación: <input name="txtNumero" type="number" required/></p>
-            <p>Nombre Huesped: <input name="txtNombre" type="text" required/></p>
-            <p>Rut <input name="txtRut" type="text" required/></p>
-            <p>Fecha: <input name="txtFecha" type="date" required/></p>
-            <p><input type="submit" value="Asignar" required/></p>
-        </form>
-        
+        <div id="contenedor">
+            <div id="cabecera">
+                <a href="index.html"><img src="Imagenes/logo.png"></a>
+            </div>
+            <div id="barra-navegacion">
+                <a href="VerListaClientes.jsp">Ver Clientes</a> |
+                <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
+                <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
+                <a href="ModificarCliente.jsp">Modificar Cliente</a> |
+                <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
+                <a href="Cotizacion.jsp">Generar Cotización</a> |
+                <a href="InformacionJSP.jsp">Información</a>
+            </div>
+            <div id="cuerpo">
+
+                <h1>Registro de Huespedes</h1>
+                <p>Ingrese los datos para registrar al nuevo Huesped</p>
+                <form method="post"></br>
+                    <label for="habitacion">Numero</label>
+                    <input name="txtNumero" type="number" required/></br>
+                    <label for="Huesped">Nombre Huesped</label><input name="txtNombre" type="text" required/></br>
+                    <label for="Rut">Rut Huesped</label><input name="txtRut" type="text" required/></br>
+                    <label for="FechaIngreso">Fecha Ingreso</label><input name="txtFecha" type="date" required/></br>
+                 <input type="submit" value="Asignar" id=enviar required/></br>
+                </form>
+            </div>
+            <div id="navAbajo">
+                <a href="javascript:history.back(1)">Volver Atrás</a>
+            </div>
+            
+        </div>
     </body>
 </html>
+
+         

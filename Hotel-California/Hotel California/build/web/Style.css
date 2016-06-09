@@ -5,6 +5,8 @@ body{background-image:url(backg.jpg);
      /* IMPORTANTE */
      text-align: center;
      alignment-adjust:middle;
+     
+     
 }
 
 h1{
@@ -30,30 +32,50 @@ a{
     font-size: 15px;
 }
 
-#lateral{
-  width: 200px;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  float: right;
+/*Para formularios, utilizar los siguientes tags*/
+
+label, input {
+     display: block;
+     width: 150px;
+     float: left;
+     margin-bottom: 10px;
 }
 
+label {
+     text-align: right;
+     width: 150px;
+     padding-right: 20px;
+}
+
+input#enviar {
+	margin-left: 95px;
+}
+
+br {
+     clear: left;
+}
+
+/*Cierre de comentario Formularios*/
+
+/*Maqueteado CSS de la web*/
+
 #navAbajo{
-  font-weight: bold;
-  border-top: 1px solid #ccc;
-  padding: 1px 0px 10px 0px;
+  padding: 10px ;
 }
 
 #barra-navegacion{
+   float: center;
   padding: 3px 10px 5px 10px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 2px inset #ccc;
 }
 
 #cuerpo{
   width: 900px;
   margin-left: 1px;
   padding: 12px 0px 10px 0px;
-  float: left;
 }
 
 #contenedor{
@@ -63,6 +85,6 @@ a{
 }
 
 #cabecera{
-  height: 100px;
+  height:120px;
   width: 900px;
 }
