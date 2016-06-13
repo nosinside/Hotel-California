@@ -7,21 +7,22 @@ import java.util.ArrayList;
 public class Habitaciones {
 
     private String numeroHabitacion = "";
-    private String nombre1 = "";
-    private String nombre2 = "";
-    private String rut1 = "";
-    private String rut2 = "";
-    private String fono1 = "";
-    private String fecha = "";
+    private String nombre1 = "Disponible";
+    private String nombre2 = "-";
+    private String rut1 = "-";
+    private String rut2 = "-";
+    private String fono1 = "-";
+    private String fecha = "-";
     private boolean reserva = false;
     private boolean alojado = false;
 
-    ArrayList<Habitaciones> habitacionSimple = new ArrayList<>();
-    ArrayList<Habitaciones> habitacionDoble = new ArrayList<>();
-    ArrayList<Habitaciones> habitacionPentHouse = new ArrayList<>();
+    public static ArrayList<Habitaciones> habitacionSimple = new ArrayList<>();
+    public static ArrayList<Habitaciones> habitacionDoble = new ArrayList<>();
+    public static ArrayList<Habitaciones> habitacionPentHouse = new ArrayList<>();
     
     //Crea habitaciones vacias
-    public Habitaciones() {
+    public Habitaciones(String numeroHabitacion) {
+        this.numeroHabitacion = numeroHabitacion;
     }
 
     //Crea Reservas

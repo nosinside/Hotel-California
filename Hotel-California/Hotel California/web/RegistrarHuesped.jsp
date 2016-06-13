@@ -3,7 +3,8 @@
     Created on : 07-jun-2016, 23:30:35
     Author     : Johan Barahona
 --%>
-
+<%@page import="Logica.Render"%>
+<%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,23 +16,18 @@
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.html"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
-                <a href="VerListaClientes.jsp">Ver Clientes</a> |
-                <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
-                <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
-                <a href="ModificarCliente.jsp">Modificar Cliente</a> |
-                <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
-                <a href="Cotizacion.jsp">Generar Cotización</a> |
-                <a href="InformacionJSP.jsp">Información</a>
+                <%
+                    out.println(Render.barraNavegacion);
+                %>
             </div>
             <div id="cuerpo">
-
                 <h1>Registro de Huespedes</h1>
                 <p>Ingrese los datos para registrar al nuevo Huesped</p>
                 <form method="post"></br>
-                    <label for="habitacion">Numero</label>
+                    <label for="habitacion">Numero Habitación</label>
                     <input name="txtNumero" type="number" required/></br>
                     <label for="Huesped">Nombre Huesped</label><input name="txtNombre" type="text" required/></br>
                     <label for="Rut">Rut Huesped</label><input name="txtRut" type="text" required/></br>

@@ -3,7 +3,8 @@
     Created on : 07-jun-2016, 23:30:18
     Author     : Johan Barahona
 --%>
-
+<%@page import="Logica.Render"%>
+<%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,16 +16,12 @@
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.html"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
-                <a href="VerListaClientes.jsp">Ver Clientes</a> |
-                <a href="RegistrarHuesped.jsp">Registrar Huesped</a> |
-                <a href="ReservaHabitacion.jsp">Reservar Habitación</a> |
-                <a href="ModificarCliente.jsp">Modificar Cliente</a> |
-                <a href="CerrarAtencion.jsp">Cerrar Atención</a> |
-                <a href="Cotizacion.jsp">Generar Cotización</a> |
-                <a href="InformacionJSP.jsp">Información</a>
+                <%
+                    out.println(Render.barraNavegacion);
+                %>
             </div>
             <div id="cuerpo">
                 <p>
