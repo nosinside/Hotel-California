@@ -1,4 +1,4 @@
-    <%-- 
+<%-- 
     Document   : RegistrarHuesped
     Created on : 07-jun-2016, 23:30:35
     Author     : Johan Barahona
@@ -6,56 +6,83 @@
 <%@page import="javax.servlet.jsp.tagext.TryCatchFinally"%>
 <%@page import="Logica.Render"%>
 <%@page import="Logica.Habitaciones" %>
+<%@page import="Logica.Parametros" %>
+
 <%
     // Para el refresco del formulario
-    String mensaje="";
-    String parametro= "";
-    parametro = request.getParameter("rbcheck");
-    String txtNumero = "";
-    
-        // Para crear el usuario en la Habitación Single
-        String txtNombre = "";
-        String txtRut = "";
-        String txtFecha = "";
-        txtNumero = request.getParameter("txtNumero");
-        txtNombre = request.getParameter("txtNombre");
-        txtRut = request.getParameter("txtRut");
-        txtFecha = request.getParameter("txtFecha");
-        if(txtNumero != null || txtNombre != null || txtRut != null || txtFecha != null){
-            for(Habitaciones aux: Habitaciones.habitacionSimple){
-            if(txtNumero.equals(aux.getNumeroHabitacion())){
-                aux.setAlojado(true);
-                aux.setReserva(true);
-                aux.setNombre1(txtNombre);
-                aux.setRut1(txtRut);
-                aux.setFecha(txtFecha);
-                parametro = null;
-            }
+        String mensaje = "";
+        String error = "";
+        String refresh = "";
+
+        if (Parametros.parametrosrbRH == null) {
+
+            Parametros.parametrosrbRH = request.getParameter("rbcheck");
         }
-        }
-    
-    if(parametro != null){
-        if(parametro.equals("1")){
-        mensaje = Render.formRegHuesped1;
-        
-        }else{
-            if(parametro.equals("2")){
-            mensaje = Render.formRegHuesped2;
-            }else{
-                if(parametro.equals("3")){
+        if (Parametros.parametrosrbRH != null) {
+            if (Parametros.parametrosrbRH.equals("1")) {
+                mensaje = Render.formRegHuesped1;
+
+            } else if (Parametros.parametrosrbRH.equals("2")) {
+                mensaje = Render.formRegHuesped2;
+            } else if (Parametros.parametrosrbRH.equals("3")) {
                 mensaje = Render.formRegHuesped3;
             }
-        }    
-    }
-    }else{
-        if(parametro == null){
-           mensaje = Render.formRenderHuesped;
+        } else if (Parametros.parametrosrbRH == null) {
+            mensaje = Render.formRenderHuesped;
         }
-    }
-    
-    
-    
-    
+        String txtNombre = "";
+        String txtNumero = "";
+        String txtRut = "";
+        String txtRut2 = "";
+        String txtNombre2 = "";
+        String txtFecha = "";
+        String btnCancelar = "";
+        txtNumero = request.getParameter("txtNumero");
+        txtNombre = request.getParameter("txtNombre");
+        txtNombre2 = request.getParameter("txtNombre2");
+        txtRut2 = request.getParameter("txtRut2");
+        txtRut = request.getParameter("txtRut");
+        txtFecha = request.getParameter("txtFecha");
+        btnCancelar = request.getParameter("btnCancelar");
+        if(btnCancelar != null){
+            if(btnCancelar.equals("cancelar")){
+            Parametros.parametrosrbRH = null;
+        }
+        }
+if(Parametros.parametrosrbRH != null){
+    if (Parametros.parametrosrbRH.equals("1")) {
+            if (txtNumero != null || txtNombre != null || txtRut != null || txtFecha != null) {
+                for (Habitaciones aux : Habitaciones.habitacionSimple) {
+                    if (txtNumero.equals(aux.getNumeroHabitacion())) {
+                        aux.setAlojado(true);
+                        aux.setReserva(true);
+                        aux.setNombre1(txtNombre);
+                        aux.setRut1(txtRut);
+                        aux.setFecha(txtFecha);
+                        Parametros.parametrosrbRH = null;
+                    }
+                }
+            }
+        } else if (Parametros.parametrosrbRH.equals("2")) {
+            if (txtNumero != null || txtNombre != null || txtRut != null || txtRut2 != null || txtFecha != null || txtNombre2 != null) {
+                for (Habitaciones aux : Habitaciones.habitacionDoble) {
+                    if (txtNumero.equals(aux.getNumeroHabitacion())) {
+                        aux.setAlojado(true);
+                        aux.setReserva(true);
+                        aux.setNombre1(txtNombre);
+                        aux.setNombre2(txtNombre2);
+                        aux.setRut1(txtRut);
+                        aux.setRut2(txtRut2);
+                        aux.setFecha(txtFecha);
+                        Parametros.parametrosrbRH = null;
+                    }
+                }
+            }
+        } else if (Parametros.parametrosrbRH.equals("3")) {
+
+        }
+}
+        
  
 %>
 
