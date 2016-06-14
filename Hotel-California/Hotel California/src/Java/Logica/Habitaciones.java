@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Habitaciones {
 
     private String numeroHabitacion = "";
-    private String nombre1 = "Disponible";
+    private String nombre1 = "-";
     private String nombre2 = "-";
     private String rut1 = "-";
     private String rut2 = "-";

@@ -30,7 +30,7 @@
                 
                 <h3>Habitaciones Singles</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Tipo</th></tr>
+                    <tr><th>Numero</th><th>Estado</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Tipo</th></tr>
                 <%
                     String reserva = "";
                     String ocupado = "";
@@ -48,7 +48,7 @@
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
-                        out.println("<th>" + ocupado +"</th>");
+                        
                         out.println("<th>" + reserva + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
@@ -61,7 +61,7 @@
                 
  <h3>Habitaciones Dobles</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
+                    <tr><th>Numero</th><th>Estado</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
                 <%
                     String reserva1 = "";
                     String ocupado1 = "";
@@ -72,10 +72,12 @@
                         }
                         if(aux.isReserva()){
                             reserva1 = "reservado";
+                         }else{
+                            reserva1 = "disponible";
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
-                        out.println("<th>" + ocupado1 +"</th>");
+                        
                         out.println("<th>" + reserva1 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
@@ -88,7 +90,7 @@
                </table>
                 <h3>Habitaciones PentHouse</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
+                    <tr><th>Numero</th><th>Estado</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
                 <%
                     String reserva2 = "";
                     String ocupado2 = "";
@@ -99,10 +101,12 @@
                         }
                         if(aux.isReserva()){
                             reserva2 = "reservado";
+                         }else{
+                            reserva2 = "disponible";
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
-                        out.println("<th>" + ocupado2 +"</th>");
+                       
                         out.println("<th>" + reserva2 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
