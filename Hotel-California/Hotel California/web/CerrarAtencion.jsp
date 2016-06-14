@@ -12,7 +12,7 @@ String txtArray = request.getParameter("txtArray");
 String mensaje = "";
 for(Habitaciones aux: Habitaciones.habitaciones){
     if(aux.getNumeroHabitacion().equals(txtArray)){
-        mensaje = "<h3>Habitación borrada exitosamente</h3>";
+        mensaje = "<h3>Check Out realizado exitosamente</h3>";
         aux.setAlojado(false);
         aux.setReserva(false);
         aux.setNombre1("-");
@@ -29,7 +29,7 @@ for(Habitaciones aux: Habitaciones.habitaciones){
     <head>
         <link rel="stylesheet" type="text/css" href="Style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to the hotel California | Cerrar atención</title>
+        <title>Welcome to the hotel California | Check Out</title>
     </head>
     <body>
         <div id="contenedor">
@@ -43,8 +43,8 @@ for(Habitaciones aux: Habitaciones.habitaciones){
             </div>
             <div id="cuerpo">
 
-                <h2>Cierres de atención</h2>
-                <h4>Seleccione la habitación a cerrar</h4>
+                <h2>Check Out</h2>
+                <h4>Seleccione la habitación para realizar el Check Out</h4>
                 
                     
                 <%  
@@ -56,7 +56,7 @@ for(Habitaciones aux: Habitaciones.habitaciones){
                             }
                     }
                         out.println("</select></p>");
-                        out.println("<p><input type='submit' value='Asignar' id=enviar required/></form></p>");
+                        out.println("<p><input type='submit' value='Check Out' id=enviar required/></form></p>");
                         }
                         
                         
@@ -66,9 +66,7 @@ for(Habitaciones aux: Habitaciones.habitaciones){
                     
 
             </div>
-            <div id="navAbajo">
-                <a href="javascript:history.back(1)">Volver Atrás</a>
-            </div>
+            
         </div>
     </body>
 </html>

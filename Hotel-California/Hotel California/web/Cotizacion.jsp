@@ -51,9 +51,7 @@ Author     : Johan Barahona
                 %>
 
             </div>
-            <div id="navAbajo">
-                <a href="javascript:history.back(1)">Volver Atrás</a>
-            </div>
+            
 
         </div>
     </body>

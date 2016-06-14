@@ -16,7 +16,7 @@ public class Render {
             + "                <a href='ReservaHabitacion.jsp'>Reservar Habitación</a> |\n"
             + "                <a href='ModificarCliente.jsp'>Modificar Cliente</a> |\n"
             + "                <a href='Cotizacion.jsp'>Cotización</a> |\n"
-            + "                <a href='CerrarAtencion.jsp'>Cerrar Atención</a> |\n"
+            + "                <a href='CerrarAtencion.jsp'>Check Out</a> |\n"
             + "                <a href='InformacionJSP.jsp'>Información</a>";
 
 // para formulario RegistrarHuesped, dibujjo de formulario
@@ -26,13 +26,13 @@ public class Render {
             + "                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text'/></br>\n"
             + "                    <label for='Rut'>Rut Huesped</label><input name='txtRut' type='text'/></br>\n"
             + "                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date'/></br>\n"
-            + "                 <input type='submit' value='Asignar' id=enviar required/></br><input type='submit' name='btnCancelar' value='cancelar'/></br>\n"
+            + "                 <input type='submit' value='Registrar' id=enviar required/></br><input type='submit' name='btnCancelar' value='cancelar'/></br>\n"
             + "                </form>";
 
     public static String formModiCli = "<table><form method='post'></br>\n"
             + "                    <label for='rut'>Rut Cliente</label>\n"
             + "                    <input name='txtRut' type='text'/></br>\n"
-            + "                 <input type='submit' value='Enviar  ' id=enviar required/></br>\n"
+            + "                 <input type='submit' value='Modificar' id=enviar required/></br>\n"
             + "                </form>";
 
     public static String formModiClivalues = "<table><form method='post'></br>\n"
@@ -47,7 +47,7 @@ public class Render {
             + "                             <tr><td><label for='Rut'>Rut Huesped</label></td><td><input name='txtRut' type='text' required/></td></tr>\n"
             + "                             <tr><td><label for='Huesped2'>Nombre Huesped 2</label></td><td><input name='txtNombre2' type='text' requiered/></td></tr>\n"
             + "                             <tr><td><label for='RutHuesped2'>Rut Huesped 2</label></td><td><input name='txtRut2' type='text' requiered/></td></tr>\n"
-            + "                             <tr><td></td><td><input type='submit' value='Asignar' id=enviar required/></td></tr>\n"
+            + "                             <tr><td></td><td><input type='submit' value='Reservar' id=enviar required/></td></tr>\n"
             + "                             </form></table>";
 
     public static String formRegHuesped3 = "<tr><td><label for='Huesped'>Nombre Huesped</label></td><td><input name='txtNombre' type='text' required/></td></tr>\n"
@@ -55,7 +55,7 @@ public class Render {
             + "                             <tr><td><label for='Huesped2'>Nombre Huesped 2</label></td><td><input name='txtNombre2' type='text' requiered/></td></tr>\n"
             + "                             <tr><td><label for='RutHuesped2'>Rut Huesped 2</label></td><td><input name='txtRut2' type='text' requiered/></td></tr>\n"
             + "                             <tr><td><label for='FechaIngreso'>Fecha Ingreso</label></td><td><input name='txtFecha' type='date' required/></td></tr>\n"
-            + "                             <tr><td></td><td><input type='submit' value='Asignar' id=enviar required/></td></tr>\n"
+            + "                             <tr><td></td><td><input type='submit' value='Registrar' id=enviar required/></td></tr>\n"
             + "                             </form></table>";
 
     public static String formRenderHuesped = "<p>Seleccione que tipo de habitación registra el Huesped</p>\n"

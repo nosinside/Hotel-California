@@ -15,7 +15,7 @@
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
                 <%
@@ -75,9 +75,7 @@
                 
             
             </div>
-            <div id="navAbajo">
-                <a href="javascript:history.back(1)">Volver Atrás</a>
-            </div>
+          
             
         </div>
     </body>
