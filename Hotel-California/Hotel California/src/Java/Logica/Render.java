@@ -46,6 +46,10 @@ public class Render {
 "                    <label>Presidencial</label><input name='rbcheck' type='radio' value='3'/></br>\n" +
 "                    <p><input type='submit' value='Enviar'></p>\n" +
 "                </form>";
-    
+    public static String selectRegistroHuesped ="<select>\n" +
+"                    <% for(Habitaciones aux: Habitaciones.habitaciones){\n" +
+"                        out.println(\"<option value='\"+ aux.getNumeroHabitacion()+ \"'\" + \">\" + aux.getNumeroHabitacion() + \"</option>\");\n" +
+"                    }%>\n" +
+"                </select>";
     
 }

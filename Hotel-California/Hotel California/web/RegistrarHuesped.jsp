@@ -10,6 +10,10 @@
 
 <%
 
+String mensaje = "";
+
+
+
  
 %>
 
@@ -33,7 +37,27 @@
             </div>
             <div id="cuerpo">
                 <h1>Registro de Huespedes</h1>
-                <%=mensaje%>
+                <form method='post'>
+                    
+                    <%  String retorno = null;
+                        retorno = request.getParameter("txtArray");
+                        if(retorno == null){
+                            out.println("<select name='txtArray'");
+                        for(Habitaciones aux: Habitaciones.habitaciones){
+                            if(aux.isAlojado() == false){
+                                out.println("<option value='"+ aux.getNumeroHabitacion()+ "'" + ">" + aux.getNumeroHabitacion() + "</option>");
+                            }
+                    }
+                        out.println("</select>");
+                        }
+                        
+                    %>
+                    
+                    
+                    <input type='submit' value='Enviar' /></br>
+                </form>
+                
+                
                 
             </div>
             
