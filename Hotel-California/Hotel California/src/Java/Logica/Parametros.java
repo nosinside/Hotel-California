@@ -11,4 +11,5 @@ package Logica;
  */
 public class Parametros {
         public static String parametrosrbRH = null;
+        public static String parametrosMH = "";
 }

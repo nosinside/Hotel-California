@@ -28,6 +28,18 @@ public class Render {
             + "                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date'/></br>\n"
             + "                 <input type='submit' value='Asignar' id=enviar required/></br><input type='submit' name='btnCancelar' value='cancelar'/></br>\n"
             + "                </form>";
+    
+        public static String formModiCli = "<table><form method='post'></br>\n"
+            + "                    <label for='rut'>Rut Cliente</label>\n"
+            + "                    <input name='txtRut' type='text'/></br>\n"
+            + "                 <input type='submit' value='Enviar  ' id=enviar required/></br>\n"
+            + "                </form>";
+        
+        public static String formModiClivalues = "<table><form method='post'></br>\n"
+            + "                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text' requiered/></br>\n"
+            + "                    <label for='Rut'>Rut Huesped</label><input name='txtRut2' type='text' requiered/></br>\n"
+            + "                 <input type='submit' value='Asignar' id=enviar required/></br></br>\n"
+            + "                </form>";
 
     public static String formRegHuesped2 = "<table><form method='post'>\n";
             
