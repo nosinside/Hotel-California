@@ -6,6 +6,24 @@ Author     : Johan Barahona
 <%@page import="Logica.Render"%>
 <%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% 
+    String tipoH = request.getParameter("tipoH");
+    String dias = request.getParameter("dias");
+  int total = 0;
+    if(dias != null || tipoH != null){
+        
+    int castTipoH = 0;
+    int castDias = 0;
+    
+    castTipoH = Integer.parseInt(tipoH);
+    castDias = Integer.parseInt(dias);
+  total = castDias * castTipoH;
+    }
+    
+    
+%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,19 +34,22 @@ Author     : Johan Barahona
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.jsp"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
                 <%
                     out.println(Render.barraNavegacion);
                 %>
+                
+               
             </div>
             <div id="cuerpo">
 
                 <%
                     out.println(Render.Cotizacion);
 
-
+                       
+                          out.println("Total: "+ String.valueOf(total));
                 %>
 
             </div>

@@ -63,23 +63,35 @@ public class Render {
             + "                        out.println(\"<option value='\"+ aux.getNumeroHabitacion()+ \"'\" + \">\" + aux.getNumeroHabitacion() + \"</option>\");\n"
             + "                    }%>\n"
             + "                </select>";
-    public static String Cotizacion = " <h1>Cotización</h1>\n"
+    public static String Cotizacion
+            = " <h1>Cotización</h1>\n"
             + "<p>Ingrese los datos para registrar la cotización:</p>"
             + "<form method='post'>"
             + "<label>Tipo Habitación:</br></label>"
             + "<select name= 'tipoH'>"
-            + "<option value='txtSingle'>Single</option>"
-            + "<option value='txtDoble'>Doble</option>"
-            + "<option value='txtPentHouse'>PentHouse</option>"
+            + "<option value='20000'>Single</option>"
+            + "<option value='50000'>Doble</option>"
+            + "<option value='150000'>PentHouse</option>"
             + "</select>"
             + "</br>"
-            + "<label>Nombre:</br></label><input name='txtNombre1' type='text' required/></br>"
-            + "<label>Telefono:</br></label><input type='number' name='txNumeroTelefono' requiered/></br>"
-            + "<label>Cantidad de Días:</br></label><input type='number' name='txDias' requiered/></br>"
+            + "<label>Cantidad de Días:</br></label>"
+            + "<select name= 'dias'>"
+            + "<option value='1'>1</option>"
+            + "<option value='2'>2</option>"
+            + "<option value='3'>3</option>"
+            + "<option value='4'>4</option>"
+            + "<option value='5'>5</option>"
+            + "<option value='6'>6</option>"
+            + "<option value='7'>7</option>"
+            + "<option value='8'>8</option>"
+            + "<option value='9'>9</option>"
+            + "<option value='10'>10</option>"
+            + "</select></br>"
             + "<p>"
-            + " <input type='submit' value='Enviar'/>"
+            + " <input type='submit' value='Cotizar'/></br>"
             + "</p>"
             + "</form>";
+
     public static String infor = "                <h3>Uso de las tecnologías JSP (JavaServer Pages)</h3>\n" +
 "                \n" +
 "                <p>Las tecnologías JaveServer Pages (JSP) nos permiten crear contenido web que contengan componentes estáticos y dinámicos. Las tecnologías JSP permiten obtener todas las capacidades de Java Servlet entregando un acercamiento mas natural para crear contenido estático.</p>\n" +
