@@ -37,28 +37,20 @@ String mensaje = "";
             </div>
             <div id="cuerpo">
                 <h1>Registro de Huespedes</h1>
-                <form method='post'>
-                    
-                    <%  String retorno = null;
-                        retorno = request.getParameter("txtArray");
-                        if(retorno == null){
-                            out.println("<select name='txtArray'");
+                
+                    <%  out.println(Render.formRegHuesped2);
+                        out.println("<tr><td><label for='Habitacion'>Número de Habitación</label></td><td><select name='txtHabitacion'>");
+                        
                         for(Habitaciones aux: Habitaciones.habitaciones){
                             if(aux.isAlojado() == false){
-                                out.println("<option value='"+ aux.getNumeroHabitacion()+ "'" + ">" + aux.getNumeroHabitacion() + "</option>");
+                                out.println("<option value='"+ aux.getNumeroHabitacion()+ "'>"+"Habitación Simple: "+aux.getTipo()+" - Número: "+ aux.getNumeroHabitacion() + "</option>");
                             }
                     }
-                        out.println("</select>");
-                        }
+                        out.println("</select></td></tr>");
+                        out.println(Render.formRegHuesped3);
                         
-                    %>
+                    %>      
                     
-                    
-                    <input type='submit' value='Enviar' /></br>
-                </form>
-                
-                
-                
             </div>
             
         </div>
