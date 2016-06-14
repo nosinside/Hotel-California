@@ -6,6 +6,24 @@
 <%@page import="Logica.Render"%>
 <%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%  
+
+String txtArray = request.getParameter("txtArray");
+String mensaje = "";
+for(Habitaciones aux: Habitaciones.habitaciones){
+    if(aux.getNumeroHabitacion().equals(txtArray)){
+        mensaje = "<h3>Habitación borrada exitosamente</h3>";
+        aux.setAlojado(false);
+        aux.setReserva(false);
+        aux.setNombre1("");
+        aux.setRut1("");
+        aux.setRut2("");
+        break;
+    }
+}
+
+
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,8 +45,27 @@
 
                 <h2>Cierres de atención</h2>
                 <h4>Seleccione la habitación a cerrar</h4>
-                <!--                    // Implementar select que invoque a arraylist
-                                    </br> // Implementar boton Enviar-->
+                
+                    
+                <%  
+                        String retorno = null;
+                        retorno = request.getParameter("txtArray");
+                        if(retorno == null){
+                            out.println("<form method='post'>");
+                            out.println("<select name='txtArray'");
+                            
+                        for(Habitaciones aux: Habitaciones.habitaciones){
+                            if(aux.isAlojado() == false){
+                                out.println("<option value='"+ aux.getNumeroHabitacion() + "'" + ">Habitación numero: " +aux.getNumeroHabitacion()+ "</option>");}
+                    }
+                        out.println("</select>");
+                        out.println("<input type='submit' value='Enviar' /></br></form>");
+                        }
+                        
+                    %>
+                    
+                    <%=mensaje%>
+                    
 
             </div>
             <div id="navAbajo">

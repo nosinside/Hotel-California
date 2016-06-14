@@ -38,12 +38,15 @@
     for(Habitaciones aux: Habitaciones.habitaciones){
         for(int i = 0; i < 10; i++){
             Habitaciones.habitaciones.get(i).setTipo("Single");
+            Habitaciones.habitaciones.get(i).setAlojado(false);
         }
         for(int i = 10; i<19; i++){
-            Habitaciones.habitaciones.get(i).setTipo("Doble");  
+            Habitaciones.habitaciones.get(i).setTipo("Doble");
+            Habitaciones.habitaciones.get(i).setAlojado(false);
         }
         for(int i = 19; i<20; i++){
             Habitaciones.habitaciones.get(i).setTipo("Presidencial");
+            Habitaciones.habitaciones.get(i).setAlojado(false);
         }
         }
     
