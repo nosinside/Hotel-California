@@ -70,5 +70,22 @@ public class Render {
             + " <input type='submit' value='Enviar'/>"
             + "</p>"
             + "</form>";
+    public static String infor = "                <h3>Uso de las tecnologías JSP (JavaServer Pages)</h3>\n" +
+"                \n" +
+"                <p>Las tecnologías JaveServer Pages (JSP) nos permiten crear contenido web que contengan componentes estáticos y dinámicos. Las tecnologías JSP permiten obtener todas las capacidades de Java Servlet entregando un acercamiento mas natural para crear contenido estático.</p>\n" +
+"                <h4>Que es una página JSP?</h4>\n" +
+"                <p>Una página JSP es un documento de texto que contiene dos tipos de texto: datos estáticos, que se pueden expresar en cualquier formato basado en texto (como HTML, SVG, WML y XML), y elementos JSP, que construyen contenido dinámico.</p>\n" +
+"                <p>La extensión recomendada para la fuente de una página JSP es .jsp. La página se puede componer de un archivo principal que incluye otros archivos, que pueden contener una pagina JSP completa o un fragmento. La extensión recomendada para un archivo fuente de una página JSP es .jspf</p>\n" +
+"                <p>Los elementos JSP es una página JSP puede ser expresada en dos sintaxis. estándar y XML, cada archivo puede usar sólo una sintaxis. Una página JSP en sintaxis XML es un documento XML y puede ser manipulado por herramientas y API's para documentos XML.</p>\n" +
+"                <h4>La construcción de una página JSP se compone de los siguientes elementos:</h4>\n" +
+"                <ul>\n" +
+"                    <li><p>Un directivo de página (<%pagina...%>) establece el tipo de contenido retornado por la página.</p></li>\n" +
+"                    <li><p>Directivas para la Tag Library (<%tablib...%>) importa librerias personalizadas.</p></li>\n" +
+"                    <li><p>jsp:useBean es un elemento estándar que crea un objeto que contiene una colección local e inicializa un identificador que apunta a ese objeto.</p></li>\n" +
+"                    <li><p>Lenguaje de expresiones para expresiones JSP (${}) recupera el valor de las propiedades del objeto. Los valores son usador para establecer un atributo personalizado y crear contenido dinámico.</p></li>\n" +
+"                    <li><p>Tags personalizados establecen variables (c:set), itera sobre una colección de nombres locales (c:forEach), e inserta texto HTML de manera condicionada en la respuesta (c:if,c:choose, c:when, c:otherwise).</p></li>\n" +
+"                    <li><p>jsp:setProperty es otro elemento estandar que establece el valor de la propiedad de un objeto.</p></li>\n" +
+"                    <li><p>Una funcion (f:equals) testea la calidad de un atriuto y el ítem actual de una colección. (Un operador == es usualmente utilizado para testear la calidad.</p></li>\n" +
+"                </ul>";
 
 }
