@@ -10,6 +10,7 @@ package Logica;
  * @author Johan Barahona
  */
 public class Parametros {
-        public static String parametrosrbRH = null;
-        public static String parametrosMH = null;
+
+    public static String parametrosrbRH = null;
+    public static String parametrosMH = null;
 }

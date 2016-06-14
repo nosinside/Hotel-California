@@ -8,9 +8,9 @@
 <%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    
-    
-    %>
+
+
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,44 +24,38 @@
                 <a href="index.jsp"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
-                <%
-                    out.println(Render.barraNavegacion);
+                <%                    out.println(Render.barraNavegacion);
                 %>
             </div>
             <div id="cuerpo">
-                <% 
+                <%
                     String modicliRut = request.getParameter("txtRut");
-                    if(modicliRut != null){
-                            Parametros.parametrosMH = modicliRut;
-                            out.println(Render.formModiClivalues);
-                    }else{
-                        if(Parametros.parametrosMH == null){
-                            out.println("<h1>Modificación de clientes</h1><h3>Ingrese el rut de cliente a modificar</h4>");
-                    out.println(Render.formModiCli);
-                        }else{
-                            modicliRut = Parametros.parametrosMH;
-                           String txtNombre = request.getParameter("txtNombre");
+                    if (modicliRut != null) {
+                        Parametros.parametrosMH = modicliRut;
+                        out.println(Render.formModiClivalues);
+                    } else if (Parametros.parametrosMH == null) {
+                        out.println("<h1>Modificación de clientes</h1><h3>Ingrese el rut de cliente a modificar</h4>");
+                        out.println(Render.formModiCli);
+                    } else {
+                        modicliRut = Parametros.parametrosMH;
+                        String txtNombre = request.getParameter("txtNombre");
                         String txtRut = request.getParameter("txtRut2");
-                          if(txtNombre != null || txtRut != null){
-                              for(int i = 0; i < Habitaciones.habitaciones.size(); i++){
-                                if(modicliRut.equals(Habitaciones.habitaciones.get(i).getRut1())){
-                                  Habitaciones.habitaciones.get(i).setRut1(txtRut);
-                                  Habitaciones.habitaciones.get(i).setNombre1(txtNombre);
-                                  out.println("<h3>Ingresado Correctamente</h3>");
-                                  Parametros.parametrosMH = null;
-                                  break;
-            }else{
+                        if (txtNombre != null || txtRut != null) {
+                            for (int i = 0; i < Habitaciones.habitaciones.size(); i++) {
+                                if (modicliRut.equals(Habitaciones.habitaciones.get(i).getRut1())) {
+                                    Habitaciones.habitaciones.get(i).setRut1(txtRut);
+                                    Habitaciones.habitaciones.get(i).setNombre1(txtNombre);
+                                    out.println("<h3>Ingresado Correctamente</h3>");
+                                    Parametros.parametrosMH = null;
+                                    break;
+                                } else {
                                     out.println("<p>Rut no encontrado</p>");
                                 }
-        }
-    } 
+                            }
                         }
-                        
-                        
-    }
-                        
-                    
-                    
+                    }
+
+
                 %>
 
             </div>
