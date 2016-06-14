@@ -10,46 +10,64 @@ package Logica;
  * @author Johan Barahona
  */
 public class Render {
-    public static String barraNavegacion = "<a href='VerHabitaciones.jsp'>Ver Habitaciones</a> |\n" +
-"                <a href='RegistrarHuesped.jsp'>Registrar Huesped</a> |\n" +
-"                <a href='ReservaHabitacion.jsp'>Reservar Habitación</a> |\n" +
-"                <a href='ModificarCliente.jsp'>Modificar Cliente</a> |\n" +
-"                <a href='CerrarAtencion.jsp'>Cerrar Atención</a> |\n" +
-"                <a href='InformacionJSP.jsp'>Información</a>";
-    
+
+    public static String barraNavegacion = "<a href='VerHabitaciones.jsp'>Ver Habitaciones</a> |\n"
+            + "                <a href='RegistrarHuesped.jsp'>Registrar Huesped</a> |\n"
+            + "                <a href='ReservaHabitacion.jsp'>Reservar Habitación</a> |\n"
+            + "                <a href='ModificarCliente.jsp'>Modificar Cliente</a> |\n"
+            + "                <a href='CerrarAtencion.jsp'>Cerrar Atención</a> |\n"
+            + "                <a href='InformacionJSP.jsp'>Información</a>";
+
 // para formulario RegistrarHuesped, dibujjo de formulario
-    public static String formRegHuesped1 = "<form method='post'></br>\n" +
-"                    <label for='habitacion'>Numero Habitación</label>\n" +
-"                    <input name='txtNumero' type='number'/></br>\n" +
-"                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text'/></br>\n" +
-"                    <label for='Rut'>Rut Huesped</label><input name='txtRut' type='text'/></br>\n" +
-"                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date'/></br>\n" +
-"                 <input type='submit' value='Asignar' id=enviar required/></br><input type='submit' name='btnCancelar' value='cancelar'/></br>\n" +
-"                </form>";
-    
-    public static String formRegHuesped2 = "<form method='post'></br>\n" +
-"                    <label for='habitacion'>Numero Habitación</label>\n" +
-"                    <input name='txtNumero' type='number' required/></br>\n" +
-"                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text' required/></br> \n" +
-"                    <label for='Rut'>Rut Huesped</label><input name='txtRut' type='text' required/></br>\n" +
-"		    <label for='Huesped2'>Nombre Huesped 2</label><input name='txtNombre2' type='text' requiered/></br>\n" +
-"		    <label for='RutHuesped2'>Rut Huesped 2</label><input name='txtRut2' type='text' requiered/></br>\n" +
-"                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date' required/></br>\n" +
-"                 <input type='submit' value='Asignar' id=enviar required/></br>\n" +
-"                </form>";
+    public static String formRegHuesped1 = "<form method='post'></br>\n"
+            + "                    <label for='habitacion'>Numero Habitación</label>\n"
+            + "                    <input name='txtNumero' type='number'/></br>\n"
+            + "                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text'/></br>\n"
+            + "                    <label for='Rut'>Rut Huesped</label><input name='txtRut' type='text'/></br>\n"
+            + "                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date'/></br>\n"
+            + "                 <input type='submit' value='Asignar' id=enviar required/></br><input type='submit' name='btnCancelar' value='cancelar'/></br>\n"
+            + "                </form>";
+
+    public static String formRegHuesped2 = "<form method='post'></br>\n"
+            + "                    <label for='habitacion'>Numero Habitación</label>\n"
+            + "                    <input name='txtNumero' type='number' required/></br>\n"
+            + "                    <label for='Huesped'>Nombre Huesped</label><input name='txtNombre' type='text' required/></br> \n"
+            + "                    <label for='Rut'>Rut Huesped</label><input name='txtRut' type='text' required/></br>\n"
+            + "		    <label for='Huesped2'>Nombre Huesped 2</label><input name='txtNombre2' type='text' requiered/></br>\n"
+            + "		    <label for='RutHuesped2'>Rut Huesped 2</label><input name='txtRut2' type='text' requiered/></br>\n"
+            + "                    <label for='FechaIngreso'>Fecha Ingreso</label><input name='txtFecha' type='date' required/></br>\n"
+            + "                 <input type='submit' value='Asignar' id=enviar required/></br>\n"
+            + "                </form>";
     public static String formRegHuesped3 = "3";
-    
-    public static String formRenderHuesped = "<p>Seleccione que tipo de habitación registra el Huesped</p>\n" +
-"                <form id='comHuesped' method='post'>\n" +
-"                    <label>Single</label><input name='rbcheck' type='radio' value='1'/></br>\n" +
-"                    <label>Doble</label><input name='rbcheck' type='radio' value='2'/></br>\n" +
-"                    <label>Presidencial</label><input name='rbcheck' type='radio' value='3'/></br>\n" +
-"                    <p><input type='submit' value='Enviar'></p>\n" +
-"                </form>";
-    public static String selectRegistroHuesped ="<select>\n" +
-"                    <% for(Habitaciones aux: Habitaciones.habitaciones){\n" +
-"                        out.println(\"<option value='\"+ aux.getNumeroHabitacion()+ \"'\" + \">\" + aux.getNumeroHabitacion() + \"</option>\");\n" +
-"                    }%>\n" +
-"                </select>";
-    
+
+    public static String formRenderHuesped = "<p>Seleccione que tipo de habitación registra el Huesped</p>\n"
+            + "                <form id='comHuesped' method='post'>\n"
+            + "                    <label>Single</label><input name='rbcheck' type='radio' value='1'/></br>\n"
+            + "                    <label>Doble</label><input name='rbcheck' type='radio' value='2'/></br>\n"
+            + "                    <label>Presidencial</label><input name='rbcheck' type='radio' value='3'/></br>\n"
+            + "                    <p><input type='submit' value='Enviar'></p>\n"
+            + "                </form>";
+    public static String selectRegistroHuesped = "<select>\n"
+            + "                    <% for(Habitaciones aux: Habitaciones.habitaciones){\n"
+            + "                        out.println(\"<option value='\"+ aux.getNumeroHabitacion()+ \"'\" + \">\" + aux.getNumeroHabitacion() + \"</option>\");\n"
+            + "                    }%>\n"
+            + "                </select>";
+    public static String Cotizacion = " <h1>Cotización</h1>\n"
+            + "<p>Ingrese los datos para registrar la cotización:</p>"
+            + "<form method='post'>"
+            + "<label>Tipo Habitación:</br></label>"
+            + "<select name= 'tipoH'>"
+            + "<option value='txtSingle'>Single</option>"
+            + "<option value='txtDoble'>Doble</option>"
+            + "<option value='txtPentHouse'>PentHouse</option>"
+            + "</select>"
+            + "</br>"
+            + "<label>Nombre:</br></label><input name='txtNombre1' type='text' required/></br>"
+            + "<label>Telefono:</br></label><input type='number' name='txNumeroTelefono' requiered/></br>"
+            + "<label>Cantidad de Días:</br></label><input type='number' name='txDias' requiered/></br>"
+            + "<p>"
+            + " <input type='submit' value='Enviar'/>"
+            + "</p>"
+            + "</form>";
+
 }
