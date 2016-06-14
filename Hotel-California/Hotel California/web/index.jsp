@@ -26,28 +26,26 @@
 <%
     // Creando Habitaciones Vacias
     
-    if(Habitaciones.habitacionSimple.size() < 1){
-        for(int i = 0; i < 10; i++){
+    if(Habitaciones.habitaciones.size() < 1){
+        for(int i = 0; i < 20; i++){
             
             // String numeroHabitacion, String nombre1, String rut1, String fono1
-        Habitaciones single = new Habitaciones(Integer.toString(i+1));
-        Habitaciones.habitacionSimple.add(single);
+        Habitaciones h = new Habitaciones(Integer.toString(i+1));
+        Habitaciones.habitaciones.add(h); 
     }
     }
-    
-    if(Habitaciones.habitacionDoble.size() < 1){
-        for(int i = 0; i < 9; i++){
-            Habitaciones doble = new Habitaciones(Integer.toString(i+1));
-            Habitaciones.habitacionDoble.add(doble);
+
+    for(Habitaciones aux: Habitaciones.habitaciones){
+        for(int i = 0; i < 10; i++){
+            Habitaciones.habitaciones.get(i).setTipo("Single");
         }
-    }
-    
-    if(Habitaciones.habitacionPentHouse.size() < 1){
-        for(int i = 0; i < 1; i++){
-            Habitaciones pHouse = new Habitaciones(Integer.toString(i+1));
-            Habitaciones.habitacionPentHouse.add(pHouse);
+        for(int i = 10; i<19; i++){
+            Habitaciones.habitaciones.get(i).setTipo("Doble");  
         }
-    }
+        for(int i = 19; i<20; i++){
+            Habitaciones.habitaciones.get(i).setTipo("Presidencial");
+        }
+        }
     
 %>
                 <h1>Bienvenido</h1>

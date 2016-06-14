@@ -15,7 +15,6 @@ public class Render {
 "                <a href='ReservaHabitacion.jsp'>Reservar Habitación</a> |\n" +
 "                <a href='ModificarCliente.jsp'>Modificar Cliente</a> |\n" +
 "                <a href='CerrarAtencion.jsp'>Cerrar Atención</a> |\n" +
-"                <a href='Cotizacion.jsp'>Generar Cotización</a> |\n" +
 "                <a href='InformacionJSP.jsp'>Información</a>";
     
 // para formulario RegistrarHuesped, dibujjo de formulario

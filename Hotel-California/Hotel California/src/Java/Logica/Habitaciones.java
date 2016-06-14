@@ -13,12 +13,19 @@ public class Habitaciones {
     private String rut2 = "-";
     private String fono1 = "-";
     private String fecha = "-";
+    private String tipo = "";
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     private boolean reserva = false;
     private boolean alojado = false;
 
-    public static ArrayList<Habitaciones> habitacionSimple = new ArrayList<>();
-    public static ArrayList<Habitaciones> habitacionDoble = new ArrayList<>();
-    public static ArrayList<Habitaciones> habitacionPentHouse = new ArrayList<>();
+    public static ArrayList<Habitaciones> habitaciones = new ArrayList<>();
     
     //Crea habitaciones vacias
     public Habitaciones(String numeroHabitacion) {

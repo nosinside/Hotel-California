@@ -30,20 +30,21 @@
                 
                 <h3>Habitaciones Singles</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th></tr>
+                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Tipo</th></tr>
                 <%
                     String reserva = "";
                     String ocupado = "";
-                    for(Habitaciones aux: Habitaciones.habitacionSimple){
-                        if(aux.isAlojado() == true){
-                            ocupado = "si";
+                    for(Habitaciones aux: Habitaciones.habitaciones){
+                        if(aux.getTipo().equals("Single")){
+                            if(aux.isAlojado()){
+                            ocupado = "ocupado";
                         }else{
-                            ocupado ="no";
-                        }
-                        if(aux.isReserva() == true){
-                            reserva = "Reservado";
+                                ocupado = "disponible";
+                            }
+                        if(aux.isReserva()){
+                            reserva = "reservado";
                         }else{
-                            reserva = "Disponible";
+                            reserva = "disponible";
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
@@ -51,27 +52,26 @@
                         out.println("<th>" + reserva + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
+                        out.println("<th>" + aux.getTipo()+"</th>");
                         out.println("</tr>");
+                        }
                     }
                 %>
                 </table>
                 
-                <h3>Habitaciones Dobles</h3>
+ <h3>Habitaciones Dobles</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th></tr>
+                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
                 <%
                     String reserva1 = "";
                     String ocupado1 = "";
-                    for(Habitaciones aux: Habitaciones.habitacionDoble){
-                        if(aux.isAlojado() == true){
-                            ocupado1 = "si";
-                        }else{
-                            ocupado1 ="no";
+                    for(Habitaciones aux: Habitaciones.habitaciones){
+                        if(aux.getTipo().equals("Doble")){
+                            if(aux.isAlojado()){
+                            ocupado1 = "ocupado";
                         }
-                        if(aux.isReserva() == true){
-                            reserva1 = "Reservado";
-                        }else{
-                            reserva1 = "Disponible";
+                        if(aux.isReserva()){
+                            reserva1 = "reservado";
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
@@ -79,27 +79,26 @@
                         out.println("<th>" + reserva1 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
-                        out.println("<th>" + aux.getNombre2()+"</th>");
+                        out.println("<th>" + aux.getRut2()+"</th>");
+                        out.println("<th>" + aux.getTipo()+"</th>");
                         out.println("</tr>");
+                        }
                     }
                 %>
-                </table>
+               </table>
                 <h3>Habitaciones PentHouse</h3>
                 <table border="1">
-                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th></tr>
+                    <tr><th>Numero</th><th>Ocupado</th><th>Estado reserva</th><th>Nombre de Reservante</th><th>Rut Reservante</th><th>Nombre Acompañante</th><th>Tipo</th></tr>
                 <%
                     String reserva2 = "";
                     String ocupado2 = "";
-                    for(Habitaciones aux: Habitaciones.habitacionPentHouse){
-                        if(aux.isAlojado() == true){
-                            ocupado2 = "si";
-                        }else{
-                            ocupado2 ="no";
+                    for(Habitaciones aux: Habitaciones.habitaciones){
+                        if(aux.getTipo().equals("Presidencial")){
+                            if(aux.isAlojado()){
+                            ocupado2 = "ocupado";
                         }
-                        if(aux.isReserva() == true){
-                            reserva2 = "Reservado";
-                        }else{
-                            reserva2 = "Disponible";
+                        if(aux.isReserva()){
+                            reserva2 = "reservado";
                         }
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
@@ -107,8 +106,10 @@
                         out.println("<th>" + reserva2 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
-                        out.println("<th>" + aux.getNombre2()+"</th>");
+                        out.println("<th>" + aux.getRut2()+"</th>");
+                        out.println("<th>" + aux.getTipo()+"</th>");
                         out.println("</tr>");
+                        }
                     }
                 %>
                 </table>

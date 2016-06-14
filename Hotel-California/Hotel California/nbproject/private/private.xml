@@ -4,12 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/InformacionJSP.jsp</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/ReservaHabitacion.jsp</file>
             <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/CerrarAtencion.jsp</file>
-            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/index.html</file>
-            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/Style.css</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/VerHabitaciones.jsp</file>
             <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/RegistrarHuesped.jsp</file>
-            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/src/Java/Habitaciones.java</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/index.jsp</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/src/Java/Logica/Parametros.java</file>
             <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/ModificarCliente.jsp</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/VerListaClientes.jsp</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/src/Java/Logica/Habitaciones.java</file>
+            <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/src/Java/Logica/Render.java</file>
             <file>file:/C:/Users/Johan%20Barahona/Documents/GitHub/Hotel-California/Hotel-California/Hotel%20California/web/Cotizacion.jsp</file>
         </group>
     </open-files>
