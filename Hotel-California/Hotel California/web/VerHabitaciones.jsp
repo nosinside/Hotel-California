@@ -16,7 +16,7 @@
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
                 <%
@@ -49,7 +49,7 @@
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
                         
-                        out.println("<th>" + reserva + "</th>");
+                        out.println("<th>" + ocupado + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
                         out.println("<th>" + aux.getTipo()+"</th>");
@@ -69,7 +69,9 @@
                         if(aux.getTipo().equals("Doble")){
                             if(aux.isAlojado()){
                             ocupado1 = "ocupado";
-                        }
+                        }else{
+                                ocupado1 = "Disponible";
+                            }
                         if(aux.isReserva()){
                             reserva1 = "reservado";
                          }else{
@@ -78,7 +80,7 @@
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
                         
-                        out.println("<th>" + reserva1 + "</th>");
+                        out.println("<th>" + ocupado1 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
                         out.println("<th>" + aux.getRut2()+"</th>");
@@ -98,7 +100,9 @@
                         if(aux.getTipo().equals("Presidencial")){
                             if(aux.isAlojado()){
                             ocupado2 = "ocupado";
-                        }
+                        }else{
+                                ocupado2 = "Disponible";
+                            }
                         if(aux.isReserva()){
                             reserva2 = "reservado";
                          }else{
@@ -107,7 +111,7 @@
                         out.println("<tr>");
                         out.println("<th>" + aux.getNumeroHabitacion()+"</th>");
                        
-                        out.println("<th>" + reserva2 + "</th>");
+                        out.println("<th>" + ocupado2 + "</th>");
                         out.println("<th>" + aux.getNombre1()+"</th>");
                         out.println("<th>" + aux.getRut1()+"</th>");
                         out.println("<th>" + aux.getRut2()+"</th>");

@@ -15,9 +15,9 @@ for(Habitaciones aux: Habitaciones.habitaciones){
         mensaje = "<h3>Habitación borrada exitosamente</h3>";
         aux.setAlojado(false);
         aux.setReserva(false);
-        aux.setNombre1("");
-        aux.setRut1("");
-        aux.setRut2("");
+        aux.setNombre1("-");
+        aux.setRut1("-");
+        aux.setRut2("-");
         break;
     }
 }
@@ -34,7 +34,7 @@ for(Habitaciones aux: Habitaciones.habitaciones){
     <body>
         <div id="contenedor">
             <div id="cabecera">
-                <a href="index.jsp.html"><img src="Imagenes/logo.png"></a>
+                <a href="index.jsp"><img src="Imagenes/logo.png"></a>
             </div>
             <div id="barra-navegacion">
                   <%
@@ -48,19 +48,17 @@ for(Habitaciones aux: Habitaciones.habitaciones){
                 
                     
                 <%  
-                        String retorno = null;
-                        retorno = request.getParameter("txtArray");
-                        if(retorno == null){
-                            out.println("<form method='post'>");
-                            out.println("<select name='txtArray'");
-                            
+                        if(txtArray == null){
+                            out.println("<form method='post'><label for='Habitacion'>Número de Habitación</label></td><td><select name='txtArray'>");
                         for(Habitaciones aux: Habitaciones.habitaciones){
-                            if(aux.isAlojado() == false){
-                                out.println("<option value='"+ aux.getNumeroHabitacion() + "'" + ">Habitación numero: " +aux.getNumeroHabitacion()+ "</option>");}
+                            if(aux.isAlojado()){
+                                out.println("<p><option value='"+ aux.getNumeroHabitacion()+ "'>"+"Habitación Simple: "+aux.getTipo()+" - Número: "+ aux.getNumeroHabitacion() + "</option>");
+                            }
                     }
-                        out.println("</select>");
-                        out.println("<input type='submit' value='Enviar' /></br></form>");
+                        out.println("</select></p>");
+                        out.println("<p><input type='submit' value='Asignar' id=enviar required/></form></p>");
                         }
+                        
                         
                     %>
                     
