@@ -8,21 +8,7 @@
 <%@page import="Logica.Habitaciones" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    String modicliRut = request.getParameter("txtRut");
-    if(Parametros.parametrosMH == null){
-        Parametros.parametrosMH = modicliRut;
-    }
     
-    String txtNombre = request.getParameter("txtNombre");
-    String txtRut = request.getParameter("txtRut2");
-    if(txtNombre != null || txtRut != null){
-        for(Habitaciones aux: Habitaciones.habitaciones){
-            if(aux.getRut1().equals(Parametros.parametrosMH)){
-                aux.setRut1(txtRut);
-                aux.setNombre1(txtNombre);
-            }
-        }
-    }
     
     %>
 <!DOCTYPE html>
@@ -44,20 +30,37 @@
             </div>
             <div id="cuerpo">
                 <% 
-                    if(modicliRut == null){
-                        out.println("<h1>Modificación de clientes</h1><h3>Ingrese el rut de cliente a modificar</h4>");
-                    out.println(Render.formModiCli);
+                    String modicliRut = request.getParameter("txtRut");
+                    if(modicliRut != null){
+                            Parametros.parametrosMH = modicliRut;
+                            out.println(Render.formModiClivalues);
                     }else{
-                        for(Habitaciones aux: Habitaciones.habitaciones){
-                            if(aux.getRut1().equals(modicliRut)){
-                                out.println(Render.formModiClivalues);
-                                break;
-                            }else{
-                                out.println("<h3>Rut no encontrado</h3>");
-                                break;
-                            }
+                        if(Parametros.parametrosMH == null){
+                            out.println("<h1>Modificación de clientes</h1><h3>Ingrese el rut de cliente a modificar</h4>");
+                    out.println(Render.formModiCli);
+                        }else{
+                            modicliRut = Parametros.parametrosMH;
+                           String txtNombre = request.getParameter("txtNombre");
+                        String txtRut = request.getParameter("txtRut2");
+                          if(txtNombre != null || txtRut != null){
+                              for(int i = 0; i < Habitaciones.habitaciones.size(); i++){
+                                if(modicliRut.equals(Habitaciones.habitaciones.get(i).getRut1())){
+                                  Habitaciones.habitaciones.get(i).setRut1(txtRut);
+                                  Habitaciones.habitaciones.get(i).setNombre1(txtNombre);
+                                  out.println("<h3>Ingresado Correctamente</h3>");
+                                  Parametros.parametrosMH = null;
+                                  break;
+            }else{
+                                    out.println("<p>Rut no encontrado</p>");
+                                }
+        }
+    } 
                         }
-                    }
+                        
+                        
+    }
+                        
+                    
                     
                 %>
 
