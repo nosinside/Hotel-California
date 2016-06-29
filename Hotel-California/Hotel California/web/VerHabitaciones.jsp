@@ -5,6 +5,7 @@
 --%>
 <%@page import="Logica.Render"%>
 <%@page import="Logica.Habitaciones" %>
+<%@page import="Logica.HabitaciónDAO" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,7 +35,7 @@
                 <%
                     String reserva = "";
                     String ocupado = "";
-                    for(Habitaciones aux: Habitaciones.habitaciones){
+                    for(Habitaciones aux: HabitaciónDAO.getListadoPersonas()){
                         if(aux.getTipo().equals("Single")){
                             if(aux.isAlojado()){
                             ocupado = "ocupado";
