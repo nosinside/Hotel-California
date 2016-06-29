@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>sAgregarPersona</servlet-name>
+        <servlet-class>view.sAgregarPersona</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sEliminarPersona</servlet-name>
+        <servlet-class>view.sEliminarPersona</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sMostrarNombre</servlet-name>
+        <servlet-class>view.sMostrarNombre</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sAgregarPersona</servlet-name>
+        <url-pattern>/sAgregarPersona</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sEliminarPersona</servlet-name>
+        <url-pattern>/sEliminarPersona</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sMostrarNombre</servlet-name>
+        <url-pattern>/sMostrarNombre</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-ref>
+        <res-ref-name>jdbc/datasourceHotelCalifornia</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>

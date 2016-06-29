@@ -32,6 +32,11 @@ public class Habitaciones {
         this.numeroHabitacion = numeroHabitacion;
     }
 
+    public Habitaciones() {
+    }
+
+    
+    
     //Crea Reservas
     public Habitaciones(String nombre1, String rut1, String fono1, String fecha, boolean reserva) {
         this.nombre1 = nombre1;
