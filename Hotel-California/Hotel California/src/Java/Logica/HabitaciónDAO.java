@@ -9,7 +9,7 @@ public class HabitaciónDAO {
     public HabitaciónDAO() {
     }
 
-    public static ArrayList<Habitaciones> getListadoPersonas() {
+    public ArrayList<Habitaciones> getListadoPersonas() {
         ArrayList<Habitaciones> lista = new ArrayList<Habitaciones>();
         try {
             BD bd = new BD();
@@ -19,12 +19,8 @@ public class HabitaciónDAO {
 
             while (result.next()) {
                 Habitaciones h = new Habitaciones();
-                h.setNumeroHabitacion(result.getString("HB_NUMEROHABITACION"));
-                h.setNombre1(result.getString("HB_NOMBRE"));
-                h.setRut1(result.getString("HB_RUT"));
-                h.setFono1(result.getString("HB_FONO"));
-                h.setFecha(result.getString("HB_FECHA"));
-                h.setTipo(result.getString("HB_TIPO"));
+                h.setNumeroHabitacion(result.getString("CLI.NUMERO_HABITACION"));
+                h.setNombre1(result.getString("CLI.NOMBRE"));
                 lista.add(h);
             }
         } catch (SQLException err) {
